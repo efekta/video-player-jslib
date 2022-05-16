@@ -3,7 +3,7 @@
 
 
 ## Яндекс поиск
-[Яндекс поиск](https://efekta.github.io/video-player-jslib/dist/yandex.htm)
+[Яндекс поиск](https://efekta.github.io/video-player-jslib/dist/yandex.html)
 
 ### Как установить
 1. Python3 должен быть уже установлен. 
