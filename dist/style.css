@@ -9,30 +9,65 @@ html, body {
 }
 
 body {
-    margin: 0;
-    height: 100%;
-    font-size: 14px;
     font-family: sans-serif;
+    font-size: 14px;
     font-weight: 400;
+    height: 100%;
     line-height: 1.2;
+    margin: 0;
     overflow-x: hidden;
 }
 
 .app {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     height: 100%;
+    justify-content: center;
 }
 
 .player {
-    width: 500px;
     height: 350px;
+    width: 500px;
 }
 
 .video-container {
-    width: 100%;
     height: 100%;
+    width: 100%;
+}
+
+.btn-wrapper {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.time-wrapper {
+    margin-bottom: 15px;
+}
+
+.btn {
+    align-items: center;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 5px 15px;
+    transition: all .5s ease-in-out;
+}
+
+.btn:hover {
+    background:
+      linear-gradient(-45deg,
+      rgba(255, 255, 255, 0.15) 25%,transparent 25%,
+      transparent 50%, rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0.15) 75%,transparent 75%)
+      left/30px 30px repeat-x,
+      linear-gradient(to right, red 0%, yellow 50%, green 100%) left/100% fixed,
+      lightgray;
+    border-color: transparent;
 }
 
 .progress {
@@ -42,19 +77,19 @@ body {
 }
 
 .progress-bar {
-    padding: 0 5px;
+    animation: change 1s linear infinite;
     background:
       linear-gradient(-45deg,
       rgba(255, 255, 255, 0.15) 25%,transparent 25%,
       transparent 50%, rgba(255, 255, 255, 0.15) 50%,
       rgba(255, 255, 255, 0.15) 75%,transparent 75%)
       left/30px 30px repeat-x,
-      linear-gradient(to right, red 0%, yellow 50%, green 100%) left/var(--p,100%) fixed,
+      linear-gradient(to right, red 0%, yellow 50%, green 100%) left/100% fixed,
       lightgray;
-    animation: change 1s linear infinite;
+    padding: 5px 15px;
 }
 
 @keyframes change {
-  from {background-position:0 0,left}
-  to {background-position:30px 0,left}
+  from {background-position: 0 0,left}
+  to {background-position: 30px 0,left}
 }
