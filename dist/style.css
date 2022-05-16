@@ -20,26 +20,45 @@ body {
 
 .app {
     align-items: center;
+    background: #fff;
     display: flex;
+    flex-direction: column;
     height: 100%;
     justify-content: center;
-}
-
-.container {
     padding: 0 15px;
 }
 
+.content {
+    -webkit-box-shadow: 0px 0px 10px 6px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 10px 6px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 10px 6px rgba(34, 60, 80, 0.2);
+    height: 50vh;
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .content {
+        width: 80%;
+    }
+}
+
 @media(min-width: 1200px) {
-    .container {
+    .content {
+        width: 60%;
+    }
+}
+
+@media(min-width: 1200px) {
+    .app {
         margin: 0 auto;
         max-width: 1200px;
     }
 }
 
 .player {
-    height: 350px;
+    cursor: pointer;
+    height: 100%;
     position: relative;
-    width: 500px;
 }
 
 .video-container {
@@ -48,31 +67,53 @@ body {
 }
 
 .time-wrapper {
-    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 12px;
+    width: calc(100% - 84px);
 }
+
+.controls-wrapper {
+    align-items: center;
+    background: #000;
+    bottom: 0;
+    height: 54px;
+    flex-wrap: wrap;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    display: flex;
+}
+
+.controls-btn {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    padding: 8px;
+}
+
 
 .btn {
+    background: transparent;
     border: none;
-    height: 25px;
+    height: 28px;
     cursor: pointer;
-    width: 25px;
+    width: 28px;
 }
 
-.btn--play {
-    bottom: 0;
-    left: 0;
-        position: absolute;
+.btn--volume {
+    height: 35px;
+    width: 35px;
 }
 
 .svg-ico {
+    fill: #fff;
     height: 100%;
     width: 100%;
 }
 
 .progress {
-    border: 1px solid gray;
-    border-radius: 15px;
-    overflow: hidden;
+    background: #8e8e93;
+    width: 100%;
 }
 
 .progress-bar {
@@ -85,7 +126,7 @@ body {
       left/30px 30px repeat-x,
       linear-gradient(to right, red 0%, yellow 50%, green 100%) left/100% fixed,
       lightgray;
-    padding: 5px 15px;
+    height: 3px;
 }
 
 @keyframes change {
