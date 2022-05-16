@@ -1,4 +1,9 @@
 ## Видеоплеер
+[Видеоплеер](https://efekta.github.io/video-player-jslib/dist/index.html)
+
+
+## Яндекс поиск
+[Яндекс поиск](https://efekta.github.io/video-player-jslib/dist/yandex.htm)
 
 ### Как установить
 1. Python3 должен быть уже установлен. 
